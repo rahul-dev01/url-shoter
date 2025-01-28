@@ -8,8 +8,9 @@ const PORT = process.env[`${NODE_ENV}_PORT`]
 
 const app = express()
 
-app.use("/api/v1" , v1Router)
+app.use(express.json());
 
+app.use("/api/v1" , v1Router)
 
 
 app.listen(PORT ,()=>{

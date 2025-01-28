@@ -1,11 +1,11 @@
 const express = require('express')
-
 const URLRouter= express.Router()
 
-URLRouter.post("/new" ,(req , res)=>{
-    console.log(req.url)
-    res.send("OK")
-})
+const { CreateNewURLController } = require("./../../controllers/url.controller")
+
+URLRouter.post("/new" , CreateNewURLController)
+
+
 
 module.exports = {
     URLRouter
